@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h2> Essential JS 1 - Grid Control</h2>
+    @(Html.EJ().Grid<object>("FlatGrid")
+
+                                    .Datasource((IEnumerable<object>)ViewBag.gridData)
+                                    .AllowPaging().PageSettings(page => page.PageSize(4))
+                                    .Columns(col =>
+
+                                    {
+
+                                        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+                                        col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+                                        col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+
+                                        col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+
+                                        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+
+                                    })
+
+    )
+    <br /><br />
+    <h2> Essential JS 2 - Grid Component </h2>
+
+    @Html.EJS().Grid("Grid").DataSource((IEnumerable<object>)ViewBag.gridData).Columns(col =>
+    {
+        col.Field("OrderID").HeaderText("Order ID").Width("120").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+        col.Field("CustomerID").HeaderText("Customer Name").Width("150").Add();
+        col.Field("OrderDate").HeaderText("Order Date").Width("130").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Format("yMd").Add();
+        col.Field("ShipCountry").HeaderText("Ship Country").Width("120").Add();
+
+    }).AllowPaging().PageSettings(page => page.PageSize(4).PageSizes(true)).Render()
+</div>

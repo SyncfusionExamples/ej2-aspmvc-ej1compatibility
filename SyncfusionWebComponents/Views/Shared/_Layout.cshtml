@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @* Syncfusion Essential JS 1 Styles *@
+    @Styles.Render("https://cdn.syncfusion.com/16.1.0.24/js/web/bootstrap-theme/ej.web.all.compatibility.min.css")
+    @* Syncfusion Essential JS 2 Styles *@
+    @Styles.Render("https://cdn.syncfusion.com/ej2/styles/compatibility/material.css")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Compatability", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jsrender.min.js")
+    @* Syncfusion Essential JS 1 Scripts *@
+    @Scripts.Render("~/Scripts/ej/web/ej.web.all.min.js")
+    @* Syncfusion Essential JS 2 Scripts *@
+    @Scripts.Render("~/Scripts/ej2/ej2.min.js")
+    @RenderSection("scripts", required: false)
+    <script>
+        // Extend ej namespace with Syncfusion
+        var dataCopy = Object.assign({}, ej.data);
+        $.extend(ej, Syncfusion);
+        $.extend(ej.data, dataCopy);
+    </script>
+
+    @Html.EJ().ScriptManager()
+    @Html.EJS().ScriptManager()
+</body>
+</html>
