@@ -1,20 +1,22 @@
-# Syncfusion Essential JS 1 and Essential JS 2 ASP.Net MVC Compatability
+# Syncfusion Essential JS 1 and Essential JS 2 ASP.Net MVC Compatibility
 
-This documentation explained how to render EJ1 and EJ2 Syncfusion components in a single page.
+This demo purpose to avoid EJ1 & EJ2 compatibility issues.
 
-# Adding Application: 	
+# Solution 
+
+The below setps help you to render EJ1 and EJ2 Syncfusion components in a single page ASP.NET MVC Application.
+
+## Adding Application	
 
 You can create Essential JS 1 and Essential JS 2 controls using below getting started links
 
-Getting started for EJ2 ASPMVC control
- [ https://ej2.syncfusion.com/aspnetmvc/documentation/grid/getting-started-mvc.html] 
+* (Getting started for EJ2 ASPMVC control)[https://ej2.syncfusion.com/aspnetmvc/documentation/grid/getting-started-mvc.html] 
+* (Getting started for EJ1 ASPMVC control)[https://help.syncfusion.com/aspnetmvc/grid/getting-started ]
 
-Getting started for EJ1 ASPMVC control 
- [ https://help.syncfusion.com/aspnetmvc/grid/getting-started ]
-
-# Style Compatibility:
+## Style Compatibility
 
 Add compatibility styles. We have Essential JS 1 and Essential JS 2 compatibility style which won’t affect each other.
+
 ```
 <head>
     @* Syncfusion Essential JS 1 Styles *@
@@ -25,8 +27,10 @@ Add compatibility styles. We have Essential JS 1 and Essential JS 2 compatibilit
 </head>
 ```
 
-# Scripts Compatibility:
-  Add scripts for Essential JS 1 and Essential JS 2 as below.
+## Scripts Compatibility
+
+Add scripts for Essential JS 1 and Essential JS 2 as below.
+
 ```
 @* Syncfusion Essential JS 1 Scripts *@
 <script 
@@ -40,9 +44,9 @@ src="http://cdn.syncfusion.com/js/assets/external/jquery3.3.1.min.js"></script>
 
 Note: Need to add ej1 script before ej2 scripts or else it will throw script error.
 
-# Adding Compatibility: 
+## Adding Compatibility
 
-To achieve this requirement, you need to use the below code in _Layout.cshtml page. Because EJ1 and EJ2 has same library names to perform the different actions. So conflicts may occur when we refer this both controls in same application. To overcome this we need to extend this libraries in ej namespace.
+To achieve this requirement, you need to use the below code in `_Layout.cshtml` page. Because EJ1 and EJ2 has same library names to perform the different actions. So conflicts may occur when we refer this both controls in same application. To overcome this we need to extend this libraries in ej namespace.
 
 ```
 <script>
@@ -52,12 +56,14 @@ To achieve this requirement, you need to use the below code in _Layout.cshtml pa
 </script>
 ```
 
-# Adding Script Manager : 
+## Adding Script Manager 
 
-Define Script manager for both Essential JS 1 and Essential JS 2:
+Define Script manager for both Essential JS 1 and Essential JS 2
+
+```
 @Html.EJ().ScriptManager()
 @Html.EJS().ScriptManager()
-
+```
 
 Finally, The Layout page looks like:
 ```
@@ -97,9 +103,9 @@ Finally, The Layout page looks like:
 </html>
 ```
 
-# Declare Essential JS 1 control & Essential JS 2 control:
+## Declare Essential JS 1 Control & Essential JS 2 Control
 
-   You have already initialized Essential JS 1 & Essential JS 2 control via getting started. if you want change control, you can initialize like below.
+You may initialized Essential JS 1 & Essential JS 2 controls using getting started. The below snippet we have initialized Eessential JS 1 & Essential JS 2 ASP.NET MVC UI Controls.
 
 ```
 <h2> Essential JS 1 - Grid Control</h2>
