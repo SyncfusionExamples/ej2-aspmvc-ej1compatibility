@@ -10,8 +10,8 @@ The below setps help you to render EJ1 and EJ2 Syncfusion components in a single
 
 You can create Essential JS 1 and Essential JS 2 controls using below getting started links
 
-* (Getting started for EJ2 ASPMVC control)[https://ej2.syncfusion.com/aspnetmvc/documentation/grid/getting-started-mvc.html] 
-* (Getting started for EJ1 ASPMVC control)[https://help.syncfusion.com/aspnetmvc/grid/getting-started ]
+* [Getting started for EJ2 ASPMVC control](https://ej2.syncfusion.com/aspnetmvc/documentation/grid/getting-started-mvc.html) 
+* [Getting started for EJ1 ASPMVC control](https://help.syncfusion.com/aspnetmvc/grid/getting-started)
 
 ## Style Compatibility
 
