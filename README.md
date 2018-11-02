@@ -1,4 +1,4 @@
-# ej2-aspmvc-ej1-compatibility- 
+# Syncfusion Essential JS 1 and Essential JS 2 ASP.Net MVC Compatability
 
 This documentation explained how to render EJ1 and EJ2 Syncfusion components in a single page.
 
